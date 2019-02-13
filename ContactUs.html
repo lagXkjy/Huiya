@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>联系我们-上海汇亚信息科技有限公司-10年专业软件开发定制经验-微信公众号小程序快速定制开发</title>
+    <meta name="keywords" content="软件定制、全网站开发、微信定制、微信公众号、微信小程序、互联网解决方案">
+    <meta name="description" content="软件定制 / 软件产品 / 解决方案 / 微信开发 国内首批小程序优质服务商、多年专注各类电子商务系统及微信定制研发、专业技术团队一对一策划服务,快速制作上线 优质自媒体资源+微信营销+公众号吸粉+营销活动,传播口碑,吸引客流!为您提供完善的营销服务平台!">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <style>
+        h1,h4{
+            display: none;
+        }
+        b{
+            font-weight: normal;
+        }
+    </style>
+    <!--[if IE 6]>
+    <script src="static/js/DD_belatedPNG.js"></script>
+    <script>DD_belatedPNG.fix('.png');</script>
+    <![endif]-->
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_ok").click(function () {
+                if ($("#uname").val()=="") {
+                    alert("请填写姓名");
+                    returns;
+                }
+                if ($("#email").val() == "") {
+                    alert("请填写邮箱");
+                    returns;
+                }
+                if ($("#phone").val() == "") {
+                    alert("请填写电话");
+                    returns;
+                }
+                if ($("#ComName").val() == "") {
+                    alert("请填写公司名称");
+                    returns;
+                }
+                if ($("#desc").val() == "") {
+                    alert("请填写需求描述");
+                    returns;
+                }
+                $.ajax({
+                    url: "Ashx/SubmitApply.ashx",
+                    type: "post",
+                    data: "uname=" + $("#uname").val() + "&email=" + $("#email").val() + "&phone=" + $("#phone").val() + "&ComName=" + $("#ComName").val() + "&desc=" + $("#desc").val(),
+                    success: function (data) {
+                        if (data=="true") {
+                            alert("提交需求成功");
+                            //提交后清空数据
+                            $("#uname").val("");
+                            $("#email").val("");
+                            $("#phone").val("");
+                            $("#ComName").val("");
+                            $("#desc").val("");
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <h1>专业互联网网站、管理平台、微信公众号小程序开发定制</h1>
+    <div class="topbar">
+        <div class="container">
+            <div class="toplinks">
+                <a href="AboutUs.html" title="上海汇亚专业企业软件定制,多年开发经验,可按需求定制,汇亚科技专业定制企业软件">关于汇亚</a><span class="sep">|</span><a href="ContactUs.html" title="欢迎来电洽谈您的专属网站">联系我们</a><span class="sep">|</span><a href="###" style="display:none;">客服中心</a><span class="sep" style="display:none;">|</span>
+                <span class="tel">服务热线：021-54243523<span class="sep"></span>021-54243529</span>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo" title="汇亚科技，专业互联网解决方案提供商"><img src="static/images/logo.png" alt="汇亚科技，专业互联网解决方案"/></a>
+            </div>
+            <div class="navbar-nav">
+                <ul class="nav yahei">
+                    <li class="nav-item"><a class="nav-link" href="index.html" title="微信公众号小程序专业定制">首页</a></li>
+                    <li class="nav-item" data-hover="navbar">
+                        <a class="nav-link" href="SwCustomization.html" title="互联网软件定制">软件定制</a>
+                        <div class="dropdown-menu">
+                            <ul class="nav-list">
+                                <li><a href="SwCustomization.html" title="互联网软件定制">软件服务</a></li>
+                                <li><a href="SwCustomizationWeb.html" title="多年网建经验,专业/时尚的网站设计风格,人性化网站体验">网站建设</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item" data-hover="navbar">
+                        <a class="nav-link" href="SwPropx.html" title="近千万人次免费使用">软件产品</a>
+                        <div class="dropdown-menu">
+                            <ul class="nav-list">
+                                <li><a href="SwPropx.html" title="近千万人次免费使用">汇亚易考试</a></li>
+                                <li><a href="SwProxd.html" title="提供解决方案,为您量身定制,节约时间提高工作效率">巡店系统</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item" data-hover="navbar">
+                        <a class="nav-link" href="Wxrm.html" title="企业微信定制,预约企业微信定制服务">微信应用</a>
+                        <div class="dropdown-menu">
+                            <ul class="nav-list">
+                                <li><a href="Wxrm.html" title="企业微信定制,预约企业微信定制服务">热门应用</a></li>
+                                <li><a href="Wxyy.html" title="为您定制高端公众号">微信运营</a></li>
+                                <li><a href="Wxwq.html" title="客户至上,服务为本.一流的团队,丰富的经验">微信外勤</a></li>
+                                <li><a href="Wxds.html" title="电子商务系统定制开发,用户体验好,支持多">电商行业</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Solution.html" title="专业提供解决方案,为您量身定制,节约时间提高工作效率">解决方案</a></li>
+                    <li class="nav-item"><a class="nav-link" href="News.html" title="多年软件研发经验,品牌长期合作伙伴">最新动态</a></li>
+                    <li class="nav-item last"><a class="nav-link" href="Typicalkh.html" title="为企业打造一流的互联网品牌形象">成功案例</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // header end -->
+
+<div class="content">
+    <div class="banner" style="background-image: url(files/banner_dxkh.jpg);"></div>
+    <!-- // banner end -->
+    
+    <div class="pageitem">                         
+        <div class="container">
+            <div class="aside pull-left">
+                <ul class="aside-menu">
+                    <li><a href="AboutUs.html"><i class="myicon myicon-menu1"></i><span>关于汇亚</span></a></li>
+                    <li><a href="Qualification.html"><i class="myicon myicon-menu2"></i><span>公司资质</span></a></li>
+                    <li><a href="News.html"><i class="myicon myicon-menu3"></i><span>最新动态</span></a></li>
+                    <li class="active"><a href="ContactUs.html"><i class="myicon myicon-menu4"></i><span>联系我们</span></a></li>
+                    <li><a href="Typicalkh.html"><i class="myicon myicon-menu5"></i><span>成功案例</span></a></li>
+                </ul>
+            </div>
+            <div class="main pull-right">
+                <div class="caption">
+                    <h2>快速提交您的需求</h2>
+                </div>
+                <div class="contactus">
+                    <div class="contactus-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control pull-left" id="uname" placeholder="您的姓名">
+                            <input type="text" class="form-control pull-right" id="email" placeholder="邮箱">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control pull-left" id="phone" placeholder="电话">
+                            <input type="text" class="form-control pull-right" id="ComName" placeholder="公司名称">
+                        </div>
+                        <div class="form-group">
+                            <textarea cols="30" rows="6" class="form-control" id="desc" placeholder="您的需求描述？"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-lg btn-primary" id="btn_ok" href="###">发送您的需求</a>
+                        </div>
+                    </div>
+                    <div class="contactus-list">
+                        <div class="clearfix">
+                            <div class="contact-item pull-left">
+                                <img src="files/c1.jpg" alt="">
+                                <p><strong>账户名称：</strong><span>上海汇亚信息科技有限公司</span></p>
+                                <p><strong>银行账号：</strong><span>3168 5803 0005 4445 7</span></p>
+                                <p><strong>开户行：</strong><span>上海银行徐汇支行</span></p>
+                            </div>
+                            <div class="contact-item contact-item2 pull-right">
+                                <p><strong>Name：</strong><span>Shanghai Huiya Information Tech CO.,LTD</span></p>
+                                <p><strong>Number：</strong><span>316858-03000-544457</span></p>
+                                <p><strong>Bankname：</strong><span>BANK OF SHANGHAI</span></p>
+                                <p><strong>Swift Code：</strong><span>BOSHCNSH</span></p>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="contact-item pull-left">
+                                <img src="files/c2.jpg" alt="">
+                                <p><strong>账户名称：</strong><span>中国工商银行 上海市分行 陆家嘴软件园支行</span></p>
+                                <p><strong>银行账号：</strong><span>9558 8010 0117 4925 674</span></p>
+                                <p><strong>开户人：</strong><span>葛文龙</span></p>
+                            </div>
+                            <div class="contact-item pull-right">
+                                <img src="files/c3.jpg" alt="">
+                                <p><strong>账户名称：</strong><span>中国农业银行 上海市分行 徐汇支行</span></p>
+                                <p><strong>银行账号：</strong><span>6228 4800 3103 1260 214</span></p>
+                                <p><strong>开户人：</strong><span>葛文龙</span></p>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="contact-item pull-left">
+                                <img src="files/c4.jpg" alt="">
+                                <p><strong>账户名称：</strong><span>中国建设银行 上海市分行 徐汇支行</span></p>
+                                <p><strong>银行账号：</strong><span>6227 0012 1723 0030 985</span></p>
+                                <p><strong>开户人：</strong><span>葛文龙</span></p>
+                            </div>
+                            <div class="contact-item pull-right">
+                                <img src="files/c5.jpg" alt="">
+                                <p><strong>账户名称：</strong><span>交通银行 上海市分行 天钥桥路支行</span></p>
+                                <p><strong>银行账号：</strong><span>6222 6001 1004 4491 350</span></p>
+                                <p><strong>开户人：</strong><span>葛文龙</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactus-map clearfix">
+                        <div class="map">
+                            <img src="files/map.jpg" alt="">
+                        </div>
+                        <div class="list">
+                            <div class="item">
+								<h5>联系方式</h5>
+								<ul class="li">
+									<li><strong>公司名称</strong><span>上海汇亚信息科技有限公司</span></li>
+									<li><strong>公司地址</strong><span>上海市徐汇区零陵路585号爱邦大厦8楼E座</span></li>
+									<li><strong>公司网址</strong><span>www.net366.net</span></li>
+									<li><strong>联系电话</strong><span>021-54243523 &nbsp;&nbsp;  021-54243529</span></li>
+									<li><strong>传    真</strong><span>021-54243529</span></li>
+									<li><strong>电子邮箱</strong><span>info@shhuiya.com  &nbsp;&nbsp;  roger@shhuiya.com</span></li>
+								</ul>
+							</div>
+							<div class="item">
+								<h5>乘车路线</h5>
+                                <dl class="dt">
+                                    <dt>地铁</dt>
+                                    <dd>上海体育场站下2号出口</dd>
+                                </dl>
+                                <dl class="gj clearfix">
+                                    <dt>公交</dt>
+                                    <dd>大桥六线 万体馆站下</dd>
+                                    <dd>984路 天钥桥路站下</dd>
+                                    <dd>864/44/932路 天钥桥路下 </dd>
+                                    <dd>985路 徐家汇天平路站下 </dd>
+                                    <dd>隧道二线 天钥桥路下 </dd>
+                                    <dd>89/218路 零陵路双峰北路站下 </dd>
+                                </dl>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- // pageitem end -->
+</div>
+<!-- // content end -->
+
+<div class="footer">
+    <h4>汇亚科技10年网站制作经验,自主研发网站系统,专业团队制作网站精益求精</h4>
+    <div class="container">
+        <div class="footer-brand">
+            <img src="static/images/footer_logo.png" alt="汇亚科技，专业互联网解决方案提供商">
+        </div>
+        <div class="copyright">
+            <p><a href="ContactUs.html">申请体验</a><span class="sep">|</span><a href="AboutUs.html">关于我们</a><span class="sep">|</span><a href="ContactUs.html">联系我们</a></p>
+            <p>权所有：2007－2016 汇亚科技 <a style="color: #7AB8E8;" target="_blank" href="http://www.miibeian.gov.cn/">沪ICP备11014010</a></p>
+        </div>
+        <div class="copyright" style="width:300px;margin:0 auto; padding:20px 60px;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000390" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="files/备案图标.png" style="float:left;" /><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">沪公网安备 31010402000390号</p></a>
+        </div>
+        <div class="footer-weixin">
+            <img src="static/images/wx.png" alt="汇亚乐分享" />
+            <p style="margin-top:20px;">关注“汇亚乐分享”<br>汇亚旗下公众号</p>
+            <!--<a href="###">联系在线客服</a>-->
+        </div>
+    </div>
+</div>
+<!-- // content end -->
+
+<script src="static/js/jquery-1.11.1.min.js"></script>
+<script src="static/js/jquery.placeholder.js"></script>
+<script src="static/js/common.js"></script>
+
+    <!--在线客服代码开始-->
+
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffd5f4d0de6281fe604d9a809fbd68757' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <!--在线客服代码结束-->
+    <!--Contact Us-->
+    <style type="text/css">
+        #Layer1 {
+            DISPLAY: none;
+            Z-INDEX: 1;
+            LEFT: 970px;
+            WIDTH: 200px;
+            POSITION: absolute;
+            TOP: 300px;
+            HEIGHT: 100px;
+            BACKGROUND-COLOR: #2a87ca;
+        }
+
+        .cc {
+            margin: auto;
+        }
+
+        .bb {
+            margin-left: 100px;
+            margin-top: 11px;
+        }
+
+        .aa {
+            margin-top: 50px;
+        }
+
+        .ff {
+            line-height: 25px;
+        }
+
+            .ff a {
+                color: #333333;
+            }
+    </style>
+    <div id="Layer1" style="display: none;">
+        <div id="divStayTopLeft" style="position: absolute">
+            <table width="144" height="212" border="0" cellpadding="0" cellspacing="0" class="cc">
+                <tr>
+                    <td valign="top" background="Images/2.gif">
+                        <table width="40" border="0" cellpadding="0" cellspacing="0" class="bb">
+                            <tr>
+                                <td>
+                                    <img src="Images/1.gif" width="38" height="17" onclick="javascript:hidead();" style="cursor:pointer;" />
+                                </td>
+                            </tr>
+                        </table>
+                        <table width="84%" border="0" align="center" cellpadding="0" cellspacing="0" class="aa">
+
+                            <tr>
+                                <td width="30%" class="ff" align=center>
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1014749502&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:1014749502:4" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+                                </td>
+                                <td width="39%" class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1014749502&site=qq&menu=yes">张小姐</a>
+                                </td>
+                                <td width="31%" class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1014749502&site=qq&menu=yes">咨询</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="ff" align=center>
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=943530498&site=qq&menu=yes">
+                                        <img src="http://wpa.qq.com/pa?p=1:943530498:4" border="0" />
+                                    </a>
+                                </td>
+                                <td class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=943530498&site=qq&menu=yes">徐先生</a>
+                                </td>
+                                <td class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=943530498&site=qq&menu=yes">咨询</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ff" align=center>
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=574618926&site=qq&menu=yes">
+                                        <img src="http://wpa.qq.com/pa?p=1:574618926:4" border="0" />
+                                    </a>
+                                </td>
+                                <td class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=574618926&site=qq&menu=yes">蒋先生</a>
+                                </td>
+                                <td class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=574618926&site=qq&menu=yes">咨询</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ff" align=center>
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1298570857&site=qq&menu=yes">
+                                        <img src="http://wpa.qq.com/pa?p=1:1298570857:4" border="0" />
+                                    </a>
+                                </td>
+                                <td class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1298570857&site=qq&menu=yes">葛先生</a>
+                                </td>
+                                <td class="ff">
+                                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1298570857&site=qq&menu=yes">咨询</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--Contact Us-->
+    <script language="JavaScript">
+        var showad = true;
+        var Toppx = 150;	//上端位置
+        var AdDivW = 90;	//宽度
+        var AdDivH = 100;	//高度
+        var PageWidth = 900;	//页面多少宽度象素下正好不出现左右滚动条
+        var MinScreenW = 1024;	//显示广告的最小屏幕宽度象素
+
+        var ClosebuttonHtml = '<div align="right" style="position: absolute;top:0px;right:0px;margin:2px;padding:2px;z-index:2000;"><a href="javascript:;" onclick="hidead()" style="color:red;text-decoration:none;font-size:12px;"></a></div>'
+        var AdContentHtml = '<div align="center" style="color:green;font-size:23pt;font-family:黑体;"><br><br><img src=images/topleft.gif></div>';
+        //var AdContentHtml1 = '<div align="center" style="color:green;font-size:23pt;font-family:黑体;"><br><br><img src=images/topright.gif></div>';
+        var AdContentHtml1 = document.getElementById("Layer1").innerHTML;
+        document.write('<div id="Javascript.LeftDiv" style="position: absolute;z-index:1000;width:' + AdDivW + 'px;height:' + AdDivH + 'px;top:-1000px;word-break:break-all;display:none;">' + ClosebuttonHtml + '<div>' + AdContentHtml + '</div></div>');
+        document.write('<div id="Javascript.RightDiv" style="position: absolute;z-index:1000;width:' + AdDivW + 'px;height:' + AdDivH + 'px;top:-1000px;word-break:break-all;display:none;">' + ClosebuttonHtml + '<div>' + AdContentHtml1 + '</div></div>');
+        function scall() {
+            if (!showad) { return; }
+            if (window.screen.width < MinScreenW) {
+                //alert("临时提示：\n\n显示器分辨率宽度小于"+MinScreenW+",不显示广告");
+                showad = false;
+                document.getElementById("Javascript.LeftDiv").style.display = "none";
+                document.getElementById("Javascript.RightDiv").style.display = "none";
+                return;
+            }
+            var Borderpx = ((window.screen.width - PageWidth) / 2 - AdDivW) / 2 + 60;
+            var divlen = 60;
+            if (window.screen.width == 1440) { divlen = 80; }
+            if (window.screen.width == 1280) { divlen = 43; }
+            if (window.screen.width == 1024) { divlen = -20; }
+
+            if (document.documentElement.clientWidth > 0) {
+                document.getElementById("Javascript.LeftDiv").style.display = "none";
+                document.getElementById("Javascript.LeftDiv").style.top = (document.documentElement.scrollTop + Toppx) + "px";
+                document.getElementById("Javascript.LeftDiv").style.left = (document.documentElement.scrollLeft + Borderpx) + "px";
+                document.getElementById("Javascript.RightDiv").style.display = "";
+                document.getElementById("Javascript.RightDiv").style.top = (document.documentElement.scrollTop + Toppx) + "px";
+                document.getElementById("Javascript.RightDiv").style.left = (document.documentElement.scrollLeft + document.documentElement.clientWidth - document.getElementById("Javascript.RightDiv").offsetWidth - Borderpx + divlen) + "px";
+            }
+            else {
+                document.getElementById("Javascript.LeftDiv").style.display = "none";
+                document.getElementById("Javascript.LeftDiv").style.top = document.body.scrollTop + Toppx;
+                document.getElementById("Javascript.LeftDiv").style.left = document.body.scrollLeft + Borderpx;
+                document.getElementById("Javascript.RightDiv").style.display = "";
+                document.getElementById("Javascript.RightDiv").style.top = document.body.scrollTop + Toppx;
+                document.getElementById("Javascript.RightDiv").style.left = document.body.scrollLeft + document.body.clientWidth - document.getElementById("Javascript.RightDiv").offsetWidth - Borderpx + divlen;
+            }
+        }
+
+        function hidead() {
+            showad = false;
+            document.getElementById("Javascript.LeftDiv").style.display = "none";
+            document.getElementById("Javascript.RightDiv").style.display = "none";
+        }
+        function Showad() {
+            showad = true;
+            document.getElementById("Javascript.LeftDiv").style.display = "none";
+            document.getElementById("Javascript.RightDiv").style.display = "";
+        }
+        function scalltime() {
+            window.setTimeout("scall()", 1);
+        }
+        window.onscroll = scalltime;
+        //window.onscroll=scall;
+        window.onresize = scalltime;
+        window.onload = scall;
+        //hidead();
+        //-->
+    </script>
+
+    <script type="text/javascript">
+        var posPx = 16;
+        var butong_net_top = document.getElementById("butong_net_top");
+        var butong_net_top2 = document.getElementById("butong_net_top2");
+        var butong_net_top1 = document.getElementById("butong_net_top1");
+        butong_net_top2.innerHTML = butong_net_top1.innerHTML; //克隆butong_net_top1为butong_net_top2
+
+        function wait() {
+            timerScroll = setInterval(MarqueesTopAdv, 20);
+        }
+        function MarqueesTopAdv() {
+            if (posPx == 0) {
+                clearInterval(timerScroll);
+                posPx = 16;
+                return;
+            }
+            //当滚动至butong_net_top1与butong_net_top2交界时
+            if (butong_net_top2.offsetTop - butong_net_top.scrollTop <= 0) {
+                butong_net_top.scrollTop = 0; //butong_net_top跳到最顶端
+            }
+            else {
+                butong_net_top.scrollTop = butong_net_top.scrollTop + 1;
+                posPx--;
+            }
+        }
+        var timerScroll;
+        var timerScroll1 = setInterval(wait, 3000);//设置定时器
+        //鼠标移上时清除定时器达到滚动停止的目的
+        butong_net_top.onmouseover = function () { clearInterval(timerScroll1) }
+        //鼠标移开时重设定时器
+        butong_net_top.onmouseout = function () {
+            timerScroll1 = setInterval(wait, 3000)
+        }
+    </script>
+</body>
+</html>
