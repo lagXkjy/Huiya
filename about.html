@@ -21,13 +21,23 @@
                 <div class="logo-wrap left">
                         <a href="./index.html" class="logo" title="汇亚科技，专业互联网解决方案提供商"><img src="imgs/log.png" alt="汇亚科技，专业互联网解决方案"></a>
                 </div>
-                <div class="right line-h-63 font-16 c-white">
-                    <a href="./index.html" class="inline-b mar-l-58 " title="汇亚科技-提供专业软件定制,效率高,周期短,品质好,价格优惠!">首页</a>
-                    <a href="./serve.html" class="inline-b mar-l-58" title="汇亚科技-十余年软件行业开发经验,开发定制服务.提供全行业定制服务">软件定制</a>
-                    <a href="./case.html" class="inline-b mar-l-58 " title="汇亚科技-十余年软件开发行业经验，服务上百家品牌公司!为您量身定制,提出优质的解决方案,节约时间提高工作效率!">案例</a>
-                    <a href="./about.html" class="inline-b mar-l-58 active" title="企业软件定制开发领航者，您的首选择.汇集2019年各行业商机">关于</a>
-                    <a href="./connect.html" class="inline-b mar-l-58" title="为您提供互联网高端应用制作服务,专业移动互联网制作团队,一对一策划服务,快速制作上线">联系</a>
-                </div>
+                <ul class="right line-h-63 font-16">
+                        <li class="right c-white"><a href="connect.html" class="inline-b mar-l-58 " title="为您提供互联网高端应用制作服务,专业移动互联网制作团队,一对一策划服务,快速制作上线">联系</a></li>
+                        <li class="right c-white"><a href="about.html" class="inline-b mar-l-58 active" title="企业软件定制开发领航者，您的首选择.汇集2019年各行业商机">关于</a></li>
+                        <li class="right c-white"><a href="case.html" class="inline-b mar-l-58" title="汇亚科技-十余年软件开发行业经验，服务上百家品牌公司!为您量身定制,提出优质的解决方案,节约时间提高工作效率!">案例</a></li>
+                        <li class="right c-white trigger">
+                            <a href="#" class="inline-b mar-l-58">软件产品</a>
+                            <ul class="menu">
+                                    <li><a href="jiaoyu.html" title="教育吧,为教育机构搭建独立的课程商城,全新引流低成本,低消耗,一款工具,多种玩法,引爆销量,实现快速招生,欢迎咨询!">教育吧</a></li>
+                                <li><a href="courses.html" title="课程吧一款帮助教育机构解决招生方案的微信小程序,为教育机构提供品牌宣传,招生推广,营销传播,等一站式服务,解决招生难题!">课程吧</a></li>
+                                <li><a href="1yuanbill.html" title="基于微信小程序开发的流量神器！提升品牌知 名度及收益！分享助力还能赚钱，达到粉丝 拉新裂变效果！">提现活动</a></li>
+                                <li><a href="collect.html" title="专属教育机构线下用户采集小程序，可独立部署，简单，易用、高效、实时、准确等一键获取用户手机号，摆脱传统的推广痛点，解决教育机构信息采集难题！">用户采集</a></li>
+                                <li><a href="punch.html" title="独立部署，产品集合每日打卡、闯关模式，学员互赞、学员互评、转发分享、海报分享、积分排名等增进用户粘性，真正提高社群运营效率。">打卡小程序</a></li>
+                            </ul>
+                        </li>
+                        <li class="right c-white"><a href="serve.html" class="inline-b mar-l-58" title="汇亚科技-十余年软件行业开发经验,开发定制服务.提供全行业定制服务">软件定制</a></li>
+                        <li class="right c-white"><a href="index.html" class="inline-b mar-l-58" title="汇亚科技-提供专业软件定制,效率高,周期短,品质好,价格优惠!">首页</a></li>
+                </ul>
             </div>
         </div>
         
@@ -241,6 +251,18 @@
             document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffd5f4d0de6281fe604d9a809fbd68757' type='text/javascript'%3E%3C/script%3E"));
         </script>
         <!--在线客服代码结束-->
+        <script>
+                (function() {
+                    var menu = $('.menu')
+                    var trigger =  $('.trigger')
+                    trigger.on('mouseover' ,function(){
+                        menu.show()
+                        trigger.on('mouseout' ,function(){
+                            menu.hide()
+                        })
+                    })
+                }());
+        </script>
 <script>
     var mySwiper = new Swiper('.swiper-container', {
             autoplay: 4000,//可选选项，自动滑动

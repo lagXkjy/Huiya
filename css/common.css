@@ -395,6 +395,9 @@ footer{
 .bg-post-connect{
     background: url(../imgs/poster_connect.png) center center no-repeat;
 }
+.bg-post-project{
+    background: url(../imgs/11.png) center center no-repeat;
+}
 .about_tip{
     height:97px;
     -webkit-background-size: 100% 100%;
@@ -523,4 +526,22 @@ h1,h4,h5,h6{
 b ,h2,h3{
     display: inline;
     font-weight: normal;
+}
+.trigger{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.menu{
+    position: absolute;
+    right: -29px;
+    top: 54px;
+    width: 122px;
+    background: white;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+}
+.menu a{
+    color: #303030;
 }
