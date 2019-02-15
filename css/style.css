@@ -666,7 +666,8 @@ body{
 }
 
 #newBridge .icon-right-center {
-    right: 20px !important;
+    /* right: 20px !important; */
+    right: 2px !important;
     top: 50%;
     left: auto;
     bottom: auto;

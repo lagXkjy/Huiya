@@ -545,3 +545,6 @@ b ,h2,h3{
 .menu a{
     color: #303030;
 }
+.fixed-qq{
+    right: 2px !important;
+}
